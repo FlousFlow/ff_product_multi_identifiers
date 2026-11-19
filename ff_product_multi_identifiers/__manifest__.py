@@ -1,13 +1,13 @@
 {
-    "name": "Flous Flow Product Multi Identifiers",
+    "name": "Multi Product Identifiers",
     "summary": "Multiple internal references and barcodes per product variant",
     "version": "20.0.1.0.0",
     "category": "Inventory/Product",
     "author": "Flous Flow",
     "website": "https://flousflow.com",
     "license": "LGPL-3",
+    "maintainer": "Flous Flow",
     "images": [
-        "static/description/icon.png",
         "static/description/banner.jpg",
     ],
     "depends": ["product", "web"],
@@ -25,5 +25,5 @@
     },
     "i18n": ["i18n/ar.po"],
     "installable": True,
-    "application": False,
+    "application": True,
 }

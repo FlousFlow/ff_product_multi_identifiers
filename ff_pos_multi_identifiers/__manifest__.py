@@ -1,13 +1,13 @@
 {
-    "name": "Flous Flow POS Multi Identifiers",
+    "name": "POS Product Identifiers",
     "summary": "Resolve product aliases in Odoo POS offline barcode and search flows",
     "version": "20.0.1.0.0",
     "category": "Point of Sale",
     "author": "Flous Flow",
     "website": "https://flousflow.com",
     "license": "LGPL-3",
+    "maintainer": "Flous Flow",
     "images": [
-        "static/description/icon.png",
         "static/description/banner.jpg",
     ],
     "depends": ["point_of_sale", "ff_product_multi_identifiers"],
