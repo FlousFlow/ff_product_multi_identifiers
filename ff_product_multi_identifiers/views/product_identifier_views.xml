@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_identifier_tree_view" model="ir.ui.view">
+        <field name="name">ff.product.identifier.list</field>
+        <field name="model">ff.product.identifier</field>
+        <field name="arch" type="xml">
+            <list string="Product Identifiers">
+                <field name="name"/>
+                <field name="identifier_type"/>
+                <field name="product_id"/>
+                <field name="company_id" optional="hide"/>
+                <field name="active"/>
+                <field name="sequence" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="product_identifier_form_view" model="ir.ui.view">
+        <field name="name">ff.product.identifier.form</field>
+        <field name="model">ff.product.identifier</field>
+        <field name="arch" type="xml">
+            <form string="Product Identifier">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="identifier_type"/>
+                        <field name="product_id"/>
+                        <field name="company_id"/>
+                        <field name="sequence"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_identifier_action" model="ir.actions.act_window">
+        <field name="name">Product Identifiers</field>
+        <field name="res_model">ff.product.identifier</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a product identifier alias</p>
+            <p>Use this technical view for controlled imports and exports. Normal users manage identifiers on the product form.</p>
+        </field>
+    </record>
+
+</odoo>

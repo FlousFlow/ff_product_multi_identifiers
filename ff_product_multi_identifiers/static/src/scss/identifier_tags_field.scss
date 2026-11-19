@@ -1,0 +1,26 @@
+.o_ff_identifier_tags {
+    min-height: 2.25rem;
+    align-items: center;
+
+    .o_ff_identifier_input {
+        border: 0;
+        outline: 0;
+        min-width: 8rem;
+        flex: 1 1 8rem;
+        background: transparent;
+    }
+
+    .o_ff_identifier_tag {
+        background-color: var(--o-tag-bg, #e7e7e7);
+        color: var(--o-tag-color, #343a40);
+        padding: 0.25rem 0.45rem;
+    }
+
+    .o_ff_identifier_remove {
+        border: 0;
+        background: transparent;
+        color: inherit;
+        line-height: 1;
+        padding: 0 0 0 0.25rem;
+    }
+}

@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 20.0\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Product Identifiers"
+msgstr "معرّفات المنتجات"
+
+msgid "Product Identifier"
+msgstr "معرّف المنتج"
+
+msgid "Identifier"
+msgstr "المعرّف"
+
+msgid "Internal Reference"
+msgstr "المرجع الداخلي"
+
+msgid "Barcode"
+msgstr "الباركود"
+
+msgid "Alternative Identifiers"
+msgstr "المعرّفات البديلة"
+
+msgid "An identifier cannot be empty."
+msgstr "لا يمكن أن يكون المعرّف فارغًا."

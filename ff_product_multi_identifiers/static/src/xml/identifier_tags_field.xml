@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ff_product_multi_identifiers.IdentifierTagsField">
+        <div class="o_ff_identifier_tags o_field_tags d-inline-flex flex-wrap gap-1 mw-100"
+             t-att-class="{'o_tags_input o_input': !this.props.readonly}">
+            <t t-foreach="this.tags" t-as="tag" t-key="tag.id">
+                <span class="o_tag badge rounded-pill o_ff_identifier_tag">
+                    <span t-esc="tag.props.text"/>
+                    <button t-if="tag.props.onDelete" type="button" class="o_ff_identifier_remove"
+                            t-att-title="tag.props.tooltip" t-on-click="() => tag.props.onDelete()">×</button>
+                </span>
+            </t>
+            <input t-if="!this.props.readonly"
+                   t-ref="this.inputRef"
+                   class="o_ff_identifier_input"
+                   type="text"
+                   t-att-placeholder="this.tags.length ? '' : this.props.string"
+                   t-att-value="this.state.value"
+                   t-on-input="this.onInput"
+                   t-on-keydown="this.onKeydown"/>
+        </div>
+    </t>
+</templates>

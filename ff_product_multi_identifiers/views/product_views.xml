@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_normal_form_view_multi_identifiers" model="ir.ui.view">
+        <field name="name">product.product.form.multi.identifiers</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <field name="default_code" position="replace">
+                <field name="ff_internal_identifier_data" invisible="1"/>
+                <field name="default_code" widget="ff_identifier_tags"
+                       options="{'adapter_field': 'ff_internal_identifier_data', 'identifier_type': 'internal'}"/>
+            </field>
+            <field name="barcode" position="replace">
+                <field name="ff_barcode_identifier_data" invisible="1"/>
+                <field name="barcode" widget="ff_identifier_tags"
+                       options="{'adapter_field': 'ff_barcode_identifier_data', 'identifier_type': 'barcode'}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="product_template_only_form_view_multi_identifiers" model="ir.ui.view">
+        <field name="name">product.template.form.multi.identifiers</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="default_code" position="replace">
+                <field name="ff_internal_identifier_data" invisible="1"/>
+                <field name="default_code" string="Reference" widget="ff_identifier_tags"
+                       options="{'adapter_field': 'ff_internal_identifier_data', 'identifier_type': 'internal'}"/>
+            </field>
+            <field name="barcode" position="replace">
+                <field name="ff_barcode_identifier_data" invisible="1"/>
+                <field name="barcode" widget="ff_identifier_tags"
+                       options="{'adapter_field': 'ff_barcode_identifier_data', 'identifier_type': 'barcode'}"/>
+            </field>
+        </field>
+    </record>
+</odoo>
